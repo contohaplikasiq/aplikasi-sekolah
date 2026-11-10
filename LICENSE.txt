@@ -1,0 +1,22 @@
+LISENSI PENGGUNAAN PERANGKAT LUNAK — APLIKASI SEKOLAH
+Hak cipta © Arraihan Academy. Seluruh hak dilindungi.
+
+1. PEMBERI LISENSI. Perangkat lunak ini dimiliki dan dilisensikan oleh Arraihan Academy ("Pemberi Lisensi"). Perangkat lunak dilisensikan, bukan dijual.
+
+2. CAKUPAN LISENSI. Dengan kunci lisensi yang sah, Pemberi Lisensi memberi satu lembaga pengguna ("Pengguna") hak yang terbatas, tidak eksklusif, dan tidak dapat dipindahtangankan untuk memakai perangkat lunak pada SATU instalasi, yaitu instalasi yang ID Instalasinya tercantum dalam kunci lisensi, selama masa berlaku kunci tersebut.
+
+3. MASA DEMO. Setiap instalasi baru memperoleh masa demo 7 (tujuh) hari kalender sejak instalasi untuk tujuan evaluasi. Setelah masa demo berakhir, perangkat lunak terkunci sampai kunci lisensi yang sah dimasukkan. Data Pengguna tidak dihapus oleh penguncian.
+
+4. LARANGAN. Pengguna dilarang: (a) menggandakan, menjual, menyewakan, meminjamkan, atau mengedarkan perangkat lunak atau kunci lisensi kepada pihak lain; (b) memakai satu kunci untuk lebih dari satu instalasi atau lembaga; (c) menghapus atau mengubah pernyataan hak cipta dan identitas Arraihan Academy; (d) merekayasa balik, mengubah, atau menghindari mekanisme demo dan lisensi; (e) memakai perangkat lunak untuk tujuan melawan hukum.
+
+5. DATA. Seluruh data yang dimasukkan Pengguna (siswa, nilai, keuangan, berkas, dsb.) adalah milik Pengguna dan disimpan di akun Google Drive/Sheets milik Pengguna sendiri. Pengguna bertanggung jawab atas kerahasiaan kode akses, kepatuhan terhadap peraturan pelindungan data pribadi (termasuk data anak), serta pencadangan data.
+
+6. PEMBARUAN & DUKUNGAN. Pembaruan dan dukungan teknis diberikan sesuai kesepakatan tertulis antara Pemberi Lisensi dan Pengguna.
+
+7. TANPA JAMINAN. Perangkat lunak disediakan "apa adanya". Sejauh diizinkan hukum, Pemberi Lisensi tidak menjamin bebas dari galat atau kecocokan untuk tujuan tertentu, dan tanggung jawabnya dibatasi sebesar nilai lisensi yang dibayarkan Pengguna.
+
+8. PENCABUTAN. Pelanggaran terhadap ketentuan ini dapat mengakibatkan pencabutan lisensi tanpa pengembalian biaya.
+
+9. Layanan pihak ketiga (Google Workspace, GitHub Pages, Bootstrap Icons, Google Fonts) tunduk pada ketentuan penyedianya masing-masing.
+
+Catatan: naskah ini adalah templat standar. Sebelum dipakai secara komersial, sebaiknya ditinjau oleh penasihat hukum Anda.

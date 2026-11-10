@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#158A73">
+  <title>Aplikasi Sekolah</title>
+  <meta name="description" content="Aplikasi sekolah terpadu: administrasi, LMS, PPDB, dan portal orang tua. Berlisensi Arraihan Academy.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <script>
+
+    (function () {
+      try {
+        var t = localStorage.getItem('as_theme');
+        if (!t) t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <script>
+
+    (function () {
+      function css(urls, i) {
+        i = i || 0; if (i >= urls.length) return;
+        var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = urls[i];
+        var done = false, t = setTimeout(function () { if (!done) { done = true; l.remove(); css(urls, i + 1); } }, 9000);
+        l.onload = function () { done = true; clearTimeout(t); };
+        l.onerror = function () { if (!done) { done = true; clearTimeout(t); l.remove(); css(urls, i + 1); } };
+        document.head.appendChild(l);
+      }
+      css(['https:\/\/fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito+Sans:wght@600;700;800;900&display=swap']);
+      css(['https:\/\/cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css', 'https:\/\/cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css']);
+    })();
+
+    (function () {
+      var errs = [];
+      function render() {
+        var b = document.getElementById('boot'); if (!b) return;
+        var p = b.querySelector('.err');
+        if (!p) { p = document.createElement('div'); p.className = 'err'; p.style.cssText = 'max-width:600px;padding:0 20px;font:12.5px/1.5 ui-monospace,Menlo,monospace;color:#B3261E;white-space:pre-wrap;word-break:break-word'; b.appendChild(p); }
+        p.textContent = errs.join('\n');
+      }
+      window.addEventListener('error', function (e) {
+        errs.push('GALAT: ' + e.message + (e.filename ? '  [' + String(e.filename).split('/').pop() + ' baris ' + e.lineno + ':' + e.colno + ']' : '')); render();
+      });
+      setTimeout(function () {
+        var b = document.getElementById('boot');
+        if (b && !b.classList.contains('off') && !window.__AS_LOADED) {
+          errs.push('Skrip utama (js/app.js) tidak berjalan. Penyebab umum: folder css/ dan js/ tidak ikut ter-upload ke GitHub, atau ada galat di atas. Tekan Ctrl+Shift+R; bila tetap gagal, salin SELURUH teks ini dan kirim ke pengembang.'); render();
+        }
+      }, 6000);
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="javascript:void(0)" id="skipLink">Lewati ke konten utama</a>
+
+  <!-- Layar muat awal (hilang begitu tampilan pertama siap, biasanya < 300 ms) -->
+  <div id="boot" class="boot" role="status" aria-live="polite">
+    <div class="brand"><span class="lg"><i class="bi bi-mortarboard-fill"></i></span><span><b>Aplikasi Sekolah</b><small>Memuat…</small></span></div>
+    <span class="spin" aria-hidden="true"></span>
+  </div>
+  <noscript><p style="padding:24px">Aplikasi ini memerlukan JavaScript. Aktifkan JavaScript di browser Anda.</p></noscript>
+
+  <!-- CANGKANG PUBLIK -->
+  <div id="pubShell" hidden>
+    <div id="licBarPub"></div>
+    <div class="pub-top" id="pubTop"></div>
+    <div id="pubBanner"></div>
+    <main id="pubView" tabindex="-1"></main>
+    <footer id="pubFoot" class="pub-foot"></footer>
+  </div>
+
+  <!-- CANGKANG PANEL (setelah masuk) -->
+  <div id="appShell" class="app" hidden>
+    <aside id="side" class="side" aria-label="Menu utama"></aside>
+    <div class="app-main">
+      <div id="licBarApp"></div>
+      <header id="topbar" class="topbar"></header>
+      <main id="appView" class="content" tabindex="-1"></main>
+    </div>
+    <nav id="bnav" class="bnav" aria-label="Menu cepat"></nav>
+  </div>
+  <div id="drawerBackdrop" hidden></div>
+
+  <div id="modalRoot"></div>
+  <div id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js" defer></script>
+  <script>
+    if ("serviceWorker" in navigator && /^https?:/.test(location.protocol)) window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
+  </script>
+</body>
+</html>
